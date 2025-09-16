@@ -413,10 +413,7 @@
 
 </style>
 </head>
-<body>
-  
-
-<!-- Welcome animation container - will be removed after animation completes -->
+  <!-- Welcome animation container - will be removed after animation completes -->
   <div id="welcome-root"></div>
 
   <!-- Load React, ReactDOM, and Babel from CDN -->
@@ -513,14 +510,14 @@
             <div style={{
               marginTop: '20px',
               fontFamily: 'Arial, sans-serif',
-              fontSize: '24px',
+              fontSize: '44px',
               fontWeight: 'bold',
               color: 'white',
               textAlign: 'center',
               opacity: 0,
               animation: 'fadeUp 1s ease-out forwards 0.8s'
             }}>
-              Welcome to Loop
+              Welcome to NocturneLabsV2
             </div>
             
             <div style={{
@@ -540,7 +537,7 @@
     }
     
     // Only render if we haven't seen the welcome animation this session
-    if (sessionStorage.getItem('welcomeSeen') !== 'true') {
+    if (sessionStorage.getItem('welcomeSeen') !== 'false') {
       ReactDOM.render(<WelcomeAnimation />, document.getElementById('welcome-root'));
     } else {
       // If already seen, remove the root element
@@ -592,6 +589,7 @@
       }
     }
   </style>
+<body>
   <div class="app" role="application" aria-label="Nocturne Labs UI">
 
     <!-- Sidebar -->
